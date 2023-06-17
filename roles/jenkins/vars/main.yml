@@ -1,0 +1,11 @@
+pipeline_jobs:
+  - {name: "frontend", dir: "cipipelines"}
+  - {name: "catalogue", dir: "cipipelines"}
+  - {name: "cart", dir: "cipipelines"}
+  - {name: "user", dir: "cipipelines"}
+  - {name: "payment", dir: "cipipelines"}
+  - {name: "shipping", dir: "cipipelines"}
+  - {name: "frontend", dir: "cipipelines"}
+
+folders:
+  - cipipelines
