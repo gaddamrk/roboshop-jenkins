@@ -8,4 +8,4 @@ pipeline_jobs:
   - {name: "frontend", dir: "cipipelines"}
 
 folders:
-  - {{ "cipipelines" }}
+  - cipipelines
