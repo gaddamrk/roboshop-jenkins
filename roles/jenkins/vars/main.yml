@@ -7,3 +7,5 @@ pipeline_jobs:
   - {name: "shipping", dir: "cipipelines"}
   - {name: "frontend", dir: "cipipelines"}
 
+folders:
+  - cipipelines
