@@ -3,7 +3,7 @@
   community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/folder.xml') }}"
     name: "{{item}}"
-    url: http://172.31.80.165:8080
+    url: http://172.31.88.15:8080
     user: admin
     password: "{{jenkins_password}}"
   loop: "{{ folders }}"
