@@ -1,13 +1,13 @@
 - name: create config file
   ansible.builtin.template:
-    src: s-job.xml
-    dest: /tmp/s-job.xml
+    src: job.xml
+    dest: /tmp/job.xml
 
 
 
 - name: Create a jenkins job using basic authentication
   community.general.jenkins_job:
-    config: "{{ lookup('file', '/tmp/s-job.xml') }}"
+    config: "{{ lookup('file', '/tmp/job.xml') }}"
     name: "{{item.dir}}/{{item.name}}"
     password: "{{jenkins_password}}"
     url: http://172.31.88.15:8080
