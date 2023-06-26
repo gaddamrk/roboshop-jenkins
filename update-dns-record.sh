@@ -14,5 +14,5 @@ echo '
 }' | sed -e "s/IPADDRESS/${IP}/" >/tmp/jenkins.json
 
 ZONE_ID="Z026433835I4XRBDKYCNA"
-aws route53 change-resource-record-sets --hosted-zone-id ${ZONE_ID} --change-batch file:///tmp/record.json 2>/dev/null | jq .
+aws route53 change-resource-record-sets --hosted-zone-id ${ZONE_ID} --change-batch file:///tmp/record.json | jq .
 
