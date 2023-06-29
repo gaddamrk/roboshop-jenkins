@@ -19,7 +19,7 @@
     <triggers>
         <com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger plugin="multibranch-scan-webhook-trigger">
             <spec></spec>
-            <token>catalogue</token>
+            <token>{{item.name}}</token>
         </com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger>
     </triggers>
     <disabled>false</disabled>
@@ -27,8 +27,8 @@
         <data>
             <jenkins.branch.BranchSource>
                 <source class="jenkins.plugins.git.GitSCMSource" plugin="git">
-                    <id>91c7de69-f604-4c38-9d50-f31f24be4c59</id>
-                    <remote>https://github.com/gaddamrk/catalogue.git</remote>
+                    <id>{{unique_key}}</id>
+                    <remote>https://github.com/gaddamrk/{{item.name}}.git</remote>
                     <credentialsId></credentialsId>
                     <traits>
                         <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
