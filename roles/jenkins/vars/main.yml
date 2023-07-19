@@ -9,3 +9,7 @@ ci_pipeline_jobs:
 
 folders:
   - cipipelines
+  - infra
+
+sbranch_pipeline_jobs:
+  - {name: "roboshop_infra", dir: "infra"}
