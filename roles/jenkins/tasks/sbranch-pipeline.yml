@@ -16,7 +16,7 @@
 
 
 
-- name: Create a jenkins job using basic authentication
+- name: Create a jenkins job - {{item.dir}}/{{item.name}}
   community.general.jenkins_job:
     config: "{{ lookup('file', '/tmp/job.xml') }}"
     name: "{{item.dir}}/{{item.name}}"
