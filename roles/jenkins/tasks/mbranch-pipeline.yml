@@ -1,11 +1,3 @@
-- name: if job exist or not
-  community.general.jenkins_job_info:
-    name: "{{item.dir}}/{{item.name}}"
-    password: "{{jenkins_password}}"
-    url: http://172.31.88.15:8080
-    user: admin
-  register: out
-  ignore_errors: yes
 
 - name: create config file
   ansible.builtin.template:
@@ -13,7 +5,7 @@
     dest: /tmp/m-job.xml
   vars:
     unique_key: lookup('community.general.random_string', special=false, upper=fasle, length=12)
-  when: out.failed | bool
+
 
 
 - name: Create a jenkins job - {{item.dir}}/{{item.name}}
@@ -23,5 +15,5 @@
     password: "{{jenkins_password}}"
     url: http://172.31.88.15:8080
     user: admin
-  when: out.failed | bool
+
 
