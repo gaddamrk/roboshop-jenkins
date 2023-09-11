@@ -13,3 +13,4 @@ folders:
 
 sbranch_pipeline_jobs:
   - {name: "roboshop-infra", dir: "infra"}
+  - {name: "roboshop-terraform", dir: "infra"}
